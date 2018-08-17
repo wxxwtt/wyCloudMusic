@@ -1,5 +1,5 @@
 <template>
-  <div><audio :src="songInfo.url" controls autoplay></audio></div>
+  <div class="music"><audio :src="songInfo.url" controls autoplay></audio></div>
 </template>
 <script>
 export default {
@@ -9,8 +9,10 @@ export default {
       songInfo:[]
     }
   },
+  props:['isShow'],
+
   created(){
-    this.getSongById()
+    this.getSongById();
   },
   methods : {
     getSongById(){
@@ -20,7 +22,6 @@ export default {
           if(res.data.code==200){
             this.songInfo = res.data.data[0]
           }
-          console.log(11111111);
         }).catch(err=>{
           console.log(err);
         })
@@ -29,5 +30,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+  .music {
+    audio {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+  }
 </style>

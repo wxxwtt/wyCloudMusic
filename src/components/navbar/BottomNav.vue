@@ -1,5 +1,5 @@
 <template>
-    <nav >
+    <nav>
       <ul>
         <router-link tag='li' v-for="(item,i) in navList" :key="i" :to="item.route">
           <p><i :class="['iconfont', item.className]"></i></p>
@@ -40,6 +40,12 @@ export default {
         }
       ]
     };
+  },
+  created(){
+    // this.navIsShow()
+  },
+  methods:{
+    
   }
 };
 </script>
@@ -74,7 +80,7 @@ nav ul {
     color: red;
     i {
       color: red;
-      }
+    }
   }
 }
 </style>

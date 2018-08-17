@@ -29,7 +29,7 @@ export default {
         .then(res => {
           if (res.data.code == 200) {
             this.songList = res.data.playlist.tracks;
-            console.log(res.data)
+            // console.log(res.data)
           }
         })
         .catch(err => {

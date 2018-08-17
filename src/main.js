@@ -8,10 +8,11 @@ import 'mint-ui/lib/style.css';
 Vue.use(Mint);
 import './lib/mui/css/mui.min.css'
 import './lib/font/iconfont.css'
+
 // axios 配置开始
 import Axios from 'axios'
 Axios.defaults.baseURL = "http://192.168.10.230:3000"
-Axios.defaults.timeout =  6000;
+// Axios.defaults.timeout =  6000;
 // Add a request interceptor
 Axios.interceptors.request.use(function (config) {
   // Do something before request is sent
@@ -29,8 +30,8 @@ Axios.interceptors.response.use(function (response) {
   Mint.Indicator.close();
   return response;
 }, function (error) {
-  Mint.Indicator.close();
-  Mint.Indicator.open('网络连接错误...');
+  // Mint.Indicator.close();
+  // Mint.Indicator.open('网络连接错误...');
   // Do something with response error
   return Promise.reject(error);
 });

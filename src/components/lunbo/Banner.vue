@@ -18,7 +18,7 @@ export default {
       this.$axios.get('/banner',{ xhrFields: { withCredentials: true } })
       .then(res => {
         this.imgList = res.data.banners
-        console.log(res);
+        // console.log(res);
       })
       .catch(err =>{
         console.log(err);

@@ -23,7 +23,7 @@ export default {
       this.$axios
         .get("/personalized", { xhrFields: { withCredentials: true } })
         .then(res => {
-          console.log(res);
+          // console.log(res);
           this.songList = res.data.result
         })
         .catch(err => {

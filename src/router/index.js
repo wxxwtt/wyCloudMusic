@@ -10,8 +10,7 @@ import SongListDetail from '@/components/songList/SongListDetail'
 import Player from '@/components/songList/Player'
 
 Vue.use(Router)
-
-export default new Router({
+let router =  new Router({
   linkActiveClass:'current',
   routes: [
     {
@@ -29,14 +28,16 @@ export default new Router({
       component: Movie
     },
     {
-      path: '/SongListDetail',
+      path: '/Find/SongListDetail',
       name: 'SongListDetail',
       component: SongListDetail
     },
     {
-      path: '/Player',
+      path: '/Find/SongListDetail/Player',
       name: 'Player',
       component: Player
     }
   ]
 })
+
+export default router
