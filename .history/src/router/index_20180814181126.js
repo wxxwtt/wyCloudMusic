@@ -1,0 +1,33 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import Index from '@/components/Index'
+import RecommendedMusic from '@/components/RecommendedMusic'
+import HotSongList from '@/components/HotSongList'
+import Search from '@/components/Search'
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Index',
+      component: Index
+    },
+    {
+      path: '/RecommendedMusic',
+      name: 'RecommendedMusic',
+      component: RecommendedMusic
+    },
+    {
+      path: '/HotSongList',
+      name: 'RecommendedMusic',
+      component: HotSongList
+    },
+    {
+      path: '/Search',
+      name: 'Search',
+      component: Search
+    }
+  ]
+})
